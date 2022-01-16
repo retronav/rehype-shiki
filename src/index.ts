@@ -32,10 +32,15 @@ interface Config {
  */
 function highlightCode(node: Element, highlighter: Highlighter): Element {
   const codeElement = select('code', node);
-  if (codeElement && Array.isArray(codeElement.properties.className)) {
-    const lang = (codeElement.properties.className as string[])
-      .find((c) => c.startsWith('language-'))
-      .split('language-')[1];
+  if (codeElement) {
+    let lang: string;
+    if (Array.isArray(codeElement.properties.className))
+      lang = (codeElement.properties.className as string[])
+        .find((c) => c.startsWith('language-'))
+        .split('language-')[1];
+    else lang = 'plaintext';
+    // Handle edge case encountered in Astro.
+    if (lang === 'null') lang = 'plaintext';
     const code = toText(codeElement, { whitespace: 'pre' });
     const highlighted = highlighter.codeToHtml(code, { lang });
     return raw({ type: 'raw', value: highlighted }) as Element;
