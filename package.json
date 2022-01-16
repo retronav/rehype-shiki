@@ -1,6 +1,6 @@
 {
   "name": "@obnoxiousnerd/rehype-shiki",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rehype plugin to highlight your code blocks with Shiki",
   "exports": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
