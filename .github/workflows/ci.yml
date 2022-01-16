@@ -31,6 +31,8 @@ jobs:
   
   release:
     name: Release
+    if: ${{ github.ref_name == 'main' && github.repository_owner == 'obnoxiousnerd' }}
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
