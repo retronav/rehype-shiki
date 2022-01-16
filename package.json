@@ -1,0 +1,56 @@
+{
+  "name": "@obnoxiousnerd/rehype-shiki",
+  "version": "1.0.0",
+  "private": "false",
+  "description": "Highlight your code blocks with Shiki in Rehype",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/obnoxiousnerd/rehype-shiki.git"
+  },
+  "bugs": {
+    "url": "https://github.com/obnoxiousnerd/rehype-shiki/issues"
+  },
+  "keywords": [
+    "shiki",
+    "rehype",
+    "rehype-shiki",
+    "rehype-plugin"
+  ],
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "pnpm build:dts && esbuild src/index.ts --outfile=dist/index.mjs",
+    "build:dts": "tsc --declaration --emitDeclarationOnly --outDir dist src/index.ts",
+    "check": "tsc --noEmit",
+    "clean": "node -e \"require('fs').rmSync('./dist', {recursive:true})\"",
+    "release": "pnpm build && changeset publish",
+    "test": "uvu -r esbuild-register"
+  },
+  "author": "Pranav Karawale",
+  "license": "Apache-2.0",
+  "peerDependencies": {
+    "shiki": "^0.10.0"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.19.0",
+    "esbuild": "^0.14.11",
+    "esbuild-register": "^3.3.2",
+    "rehype-stringify": "^9.0.2",
+    "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
+    "shiki": "^0.10.0",
+    "typescript": "^4.5.4",
+    "unified": "^10.1.1",
+    "uvu": "^0.5.3"
+  },
+  "dependencies": {
+    "hast-util-raw": "^7.2.1",
+    "hast-util-select": "^5.0.1",
+    "hast-util-to-text": "^3.1.1",
+    "unist-util-modify-children": "^3.0.0"
+  }
+}
