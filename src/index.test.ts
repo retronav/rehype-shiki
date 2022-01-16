@@ -80,4 +80,32 @@ test('Highlights `raw` nodes', async () => {
   );
 });
 
+test('Handles plaintext codeblocks', async () => {
+  const file = `
+# Hi
+\`\`\`
+This is a simple codeblock.
+\`\`\`
+`;
+  const highlighter = await getHighlighter({ theme: 'nord' });
+
+  const html = await unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(rehypeStringify)
+    .use(rehypeShiki, { highlighter })
+    .process(file);
+
+  assert.ok(
+    html.value.includes(
+      `<pre class="shiki" style="background-color: #2e3440ff">`
+    )
+  );
+  assert.ok(
+    html.value.includes(
+      `<span class="line"><span style="color: #d8dee9ff">This is a simple codeblock.`
+    )
+  );
+});
+
 test.run();
