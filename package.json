@@ -1,7 +1,6 @@
 {
   "name": "@obnoxiousnerd/rehype-shiki",
   "version": "1.0.0",
-  "private": "false",
   "description": "Highlight your code blocks with Shiki in Rehype",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
