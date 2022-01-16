@@ -1,6 +1,6 @@
 # `@obnoxiousnerd/rehype-shiki`
 
-Highlight code blocks with [Shiki](https://shiki.matsu.io).
+Rehype plugin to highlight your code blocks with [Shiki](https://shiki.matsu.io).
 
 # Features
 

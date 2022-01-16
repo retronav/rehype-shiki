@@ -1,8 +1,8 @@
 {
   "name": "@obnoxiousnerd/rehype-shiki",
   "version": "1.0.0",
-  "description": "Highlight your code blocks with Shiki in Rehype",
-  "module": "./dist/index.js",
+  "description": "Rehype plugin to highlight your code blocks with Shiki",
+  "exports": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
@@ -14,6 +14,7 @@
   "keywords": [
     "shiki",
     "rehype",
+    "highlight",
     "rehype-shiki",
     "rehype-plugin"
   ],
@@ -21,6 +22,9 @@
     "dist",
     "CHANGELOG.md"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "pnpm build:dts && esbuild src/index.ts --outfile=dist/index.mjs",
     "build:dts": "tsc --declaration --emitDeclarationOnly --outDir dist src/index.ts",
