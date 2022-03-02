@@ -1,4 +1,4 @@
-# `@obnoxiousnerd/rehype-shiki`
+# `@retronav/rehype-shiki`
 
 Rehype plugin to highlight your code blocks with [Shiki](https://shiki.matsu.io).
 

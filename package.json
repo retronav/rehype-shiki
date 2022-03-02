@@ -1,15 +1,15 @@
 {
-  "name": "@obnoxiousnerd/rehype-shiki",
+  "name": "@retronav/rehype-shiki",
   "version": "1.0.1",
   "description": "Rehype plugin to highlight your code blocks with Shiki",
   "exports": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/obnoxiousnerd/rehype-shiki.git"
+    "url": "https://github.com/retronav/rehype-shiki.git"
   },
   "bugs": {
-    "url": "https://github.com/obnoxiousnerd/rehype-shiki/issues"
+    "url": "https://github.com/retronav/rehype-shiki/issues"
   },
   "keywords": [
     "shiki",
@@ -39,14 +39,14 @@
     "shiki": "^0.10.0"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.19.0",
-    "esbuild": "^0.14.11",
+    "@changesets/cli": "^2.21.0",
+    "esbuild": "^0.14.23",
     "esbuild-register": "^3.3.2",
-    "rehype-stringify": "^9.0.2",
+    "rehype-stringify": "^9.0.3",
     "remark-parse": "^10.0.1",
     "remark-rehype": "^10.1.0",
-    "shiki": "^0.10.0",
-    "typescript": "^4.5.4",
+    "shiki": "^0.10.1",
+    "typescript": "^4.6.2",
     "unified": "^10.1.1",
     "uvu": "^0.5.3"
   },
