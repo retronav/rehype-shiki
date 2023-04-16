@@ -14,10 +14,11 @@
  * limitations under the License.
  */
 
-import { select, Element } from 'hast-util-select';
+import { Element, Parent } from 'hast';
+import { select } from 'hast-util-select';
 import { raw, Raw } from 'hast-util-raw';
 import { toText } from 'hast-util-to-text';
-import { modifyChildren, Parent } from 'unist-util-modify-children';
+import { modifyChildren } from 'unist-util-modify-children';
 import { Highlighter } from 'shiki';
 
 interface Config {
