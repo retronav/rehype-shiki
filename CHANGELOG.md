@@ -1,5 +1,11 @@
 # @obnoxiousnerd/rehype-shiki
 
+## 1.0.2
+
+### Patch Changes
+
+- 064f201: Update dependencies
+
 ## 1.0.1
 
 ### Patch Changes
